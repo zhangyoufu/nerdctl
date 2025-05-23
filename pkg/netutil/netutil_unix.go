@@ -42,13 +42,13 @@ import (
 
 const (
 	DefaultNetworkName = "bridge"
-	DefaultCIDR        = "10.4.0.0/24"
+	DefaultCIDR        = "172.17.0.0/24"
 	DefaultIPAMDriver  = "host-local"
 
 	// When creating non-default network without passing in `--subnet` option,
 	// nerdctl assigns subnet address for the creation starting from `StartingCIDR`
 	// This prevents subnet address overlapping with `DefaultCIDR` used by the default network
-	StartingCIDR = "10.4.1.0/24"
+	StartingCIDR = "172.17.1.0/24"
 )
 
 func (n *NetworkConfig) subnets() []*net.IPNet {
