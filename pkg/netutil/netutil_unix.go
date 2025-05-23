@@ -129,7 +129,7 @@ func (e *CNIEnv) generateCNIPlugins(driver string, name string, ipam map[string]
 		if ipv6 {
 			bridge.Capabilities["ips"] = true
 		}
-		plugins = []CNIPlugin{bridge, newPortMapPlugin(), newTuningPlugin()}
+		plugins = []CNIPlugin{bridge, newTuningPlugin()}
 	case "macvlan", "ipvlan":
 		mtu := 0
 		mode := ""
