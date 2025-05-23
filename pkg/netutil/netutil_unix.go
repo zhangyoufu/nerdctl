@@ -19,16 +19,12 @@
 package netutil
 
 import (
-	"bytes"
 	"encoding/json"
 	"fmt"
 	"net"
-	"os/exec"
 	"path/filepath"
 	"strconv"
-	"strings"
 
-	"github.com/Masterminds/semver/v3"
 	"github.com/go-viper/mapstructure/v2"
 	"github.com/vishvananda/netlink"
 
